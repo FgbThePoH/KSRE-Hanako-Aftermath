@@ -1,0 +1,13 @@
+**.pyc
+game/saves
+game/cache
+**.rpyc*
+**.rpymc
+log.txt
+errors.txt
+traceback.txt
+.tmp
+.vscode
+android.keystore
+bundle.keystore
+.DS_Store
