@@ -64,7 +64,7 @@ label aftermath_start:
         with charaexit
         play sound sfx_doorclose volume 0.5
 
-        "My bed is calling my name to come back but, I get up not taking the beds tempting offer."
+        "My bed is calling my name to come back, but I get up not taking the beds tempting offer."
 
         "While my mind fights the urge to go back to sleep, my body switches into auto-mode, getting me into my uniform."
 
@@ -138,7 +138,7 @@ label aftermath_start:
 
         ke "What's up dude? Saw someone out there or something?"
 
-        "Being stuck with Kenji for a long time is one thing but Kenji seeing Hanako here would be a fate worse than death."
+        "Being stuck with Kenji for a long time is one thing, but Kenji seeing Hanako here would be a fate worse than death."
 
         "Not just for me but for Hanako as well."
 
@@ -174,7 +174,7 @@ label aftermath_start:
 
         ke "But if you want to support the defensive mesures against our cause I won't stop you."
 
-        "I know I shouldn't but... I don't have any other options."
+        "I know I shouldn't, but... I don't have any other options."
 
         hi "Oh? and what would those be I'm really down to listen right now, {b}right here{/b}."
 
@@ -227,7 +227,7 @@ label aftermath_start:
         play music music_daily fadein 3.0
         play sound sfx_doorclose
 
-        "This will bite me in the back later but we are safe now."
+        "This will bite me in the back later, but we are safe now."
 
         show hanako basic_worry
         with charaenter
@@ -262,7 +262,14 @@ label aftermath_start:
 
         hi "Yeah, What's up?"
 
-        return
+        ha ""
+
+
+
+        if _in_replay:
+            return
+
+    return
 
 label a5c1o1:
     hi "...Good morning. I forgot to greet you this morning didn't I."
