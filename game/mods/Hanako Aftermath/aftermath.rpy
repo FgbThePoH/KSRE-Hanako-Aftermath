@@ -239,7 +239,6 @@ label aftermath_start:
         show hanako basic_distant_close
         with characlose
 
-
         "I sit on my chair and we start eating, but the silence is too loud even for Hanako."
 
         "It also could just be me overthinking this, but I'm not comfortable seeing her like this. It hurts in a way."
@@ -250,6 +249,8 @@ label aftermath_start:
 
             "What to do?"
             "Do small talk.":
+                $ points_hanako += 1
+                
                 call a5c1o1
 
             "Keep eating in silence.":
@@ -258,16 +259,49 @@ label aftermath_start:
         show hanako emb_timid_close
         with charachange
 
-        ha "Hey Hisao..."
+        ha "Hisao..."
 
         hi "Yeah, What's up?"
 
-        ha ""
+        if points_hanako > 0 or _in_replay:
+            show hanako emb_smile_close
+            with charachange
 
+            ha "I h-hope you do well in the history exam."
 
+            hi "Thank you. I hope you do well too."
+        else:
+            show hanako emb_downtimid_close
+            with charachange
+
+            ha "N-Nevermind."
+
+            hi "..?"
+        
+        hi "Let's clean up fast or else we will be late to class."
+
+        show hanako basic_bashful
+        with charadistant
+
+        "Hanako nods and helps me clean up, with some quick work we make it to class in time."
 
         if _in_replay:
             return
+
+    label .passing_grade:
+        scene bg school_scienceroom
+        with locationchange
+        
+        show hanako cover_distant_close at twoleft
+        with charaenter
+
+        "We make it to class before the bell rings, some eyes turn to us coming together again, but we are used to it by now it's nothing unusual."
+
+        show hanako emb_timid_close at offscreenleft
+        with charamovefaster
+        
+        "Hanako swiftly sneaks into her desk, without anyone else noticing."
+
 
     return
 
